@@ -1,0 +1,190 @@
+:root {
+  --active-level-color: rgb(254, 254, 254);
+  --main-color: aqua;
+  --green: rgb(8, 218, 8);
+  --brown: rgb(247, 128, 68);
+  --blue: rgb(48, 48, 227);
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(./assets/home.png);
+}
+
+.top_wrapper, .bottom_wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ancients_container {
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 10px;
+  margin-top: 10px;
+  gap: 30px;
+}
+
+.ancient {
+  width: 200px;
+  height: 260px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.ancient:hover {
+  border: 2px solid var(--main-color);
+}
+
+.active_ancient {
+  border: 2px solid var(--main-color);
+}
+
+.level_container {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.level {
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  padding: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: .3s ease-in-out;
+}
+
+.level:hover {
+  font-size: 18px;
+  color: var(--active-level-color);
+  border: 2px solid var(--active-level-color);
+}
+
+.active_level {
+  font-size: 18px;
+  color: var(--active-level-color);
+  border: 2px solid var(--active-level-color);
+}
+
+.deck_container {
+  width: 15%;
+  margin-left: 10px;
+}
+
+.create_button {
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  padding: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.current_state {
+  display: flex;
+  min-width: 15%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--main-color);
+}
+
+.stage_container {
+  width: 100%;
+  padding: 0 30px;
+  margin-bottom: 10px;
+}
+
+.stage_text {
+  color: var(--main-color);
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.dots_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dot {
+  height: 20px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:  var(--active-level-color);
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.brown {
+  background-color: var(--brown);
+}
+
+.deck_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.deck {  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./assets/mythicCardBackground.png);
+  background-size: cover;
+  width: 200px;
+  height: 260px;
+  cursor: pointer;
+}
+
+.card {
+  background-size: cover;
+  width: 200px;
+  height: 260px;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    height: 100%;
+  }
+  
+  .top_wrapper, .bottom_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
